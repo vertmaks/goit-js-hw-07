@@ -20,10 +20,11 @@ h1 {
 }
 
 .main {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%);
+  position: relative;
+  max-width: 800px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20vh;
   background-color: #f1f1f7;
   border-radius: 25px;
   padding: 35px;
@@ -56,12 +57,13 @@ h1 {
   border-radius: 25px;
   overflow: hidden;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
-/* .list-link:hover,
+.list-link:hover,
 .list-link:focus {
-  background-color: #d3d3d3;
-} */
+  font-weight: 500;
+}
 
 .circle {
   position: absolute;
@@ -71,14 +73,15 @@ h1 {
   width: 200px;
   background-color: transparent;
   border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  transition: 0.3s ease-out;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.35s ease-out;
   transition-property: background-color, transform;
+  /* mix-blend-mode: multiply; */
   z-index: -1;
 }
 
-li:focus .circle,
-li:hover .circle {
+.list-link:focus .circle,
+.list-link:hover .circle {
   background-color: #d3d3d3;
   transform: translate(-50%, -50%) scale(1);
 }
@@ -94,4 +97,24 @@ li:first-child {
 
 li:last-child {
   margin-bottom: 0;
+}
+
+.signature-container {
+  position: relative;
+  transform: rotate(-5deg);
+  margin-top: 60px;
+}
+
+.signature-img {
+  display: block;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signature-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
 }
