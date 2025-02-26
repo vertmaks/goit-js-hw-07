@@ -45,3 +45,13 @@ h2 {
   border-radius: 4px;
   padding: 8px 16px;
 }
+
+.emoji {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.item ul li:hover .emoji,
+.item ul li:focus .emoji {
+  opacity: 1;
+}
