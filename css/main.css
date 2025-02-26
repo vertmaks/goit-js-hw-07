@@ -1,3 +1,10 @@
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -8,6 +15,7 @@ body {
   background-color: #d3d3d3;
   margin: 0 auto;
   text-align: center;
+  padding: 25px;
 }
 
 a {
@@ -17,6 +25,7 @@ a {
 
 h1 {
   margin-top: 20px;
+  margin-bottom: 32px;
 }
 
 .main {
@@ -24,7 +33,7 @@ h1 {
   max-width: 800px;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 15vh;
   background-color: #f1f1f7;
   border-radius: 25px;
   padding: 35px;
@@ -117,4 +126,20 @@ li:last-child {
   margin: 0;
   font-weight: 400;
   font-size: 12px;
+}
+
+.nav {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.3s ease-out;
+  transition-property: font-weight, text-shadow, left;
+}
+
+.nav:focus,
+.nav:hover {
+  font-weight: 500;
+  left: 35px;
 }

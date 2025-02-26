@@ -62,7 +62,8 @@
           rel="noopener noreferrer"
           ><img
             class="signature-img"
-            src="./images/signature.webp"
+            src="./images/signature.webp
+            "
             alt="Developer's signature"
             width="150"
           />
@@ -70,6 +71,27 @@
         >
       </div>
     </main>
-    <footer></footer>
+
+    <!-- #region Optimizing the loading of the second task -->
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const imagesToPreload = [
+            'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
+            'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
+            'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
+            'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
+          ];
+
+          imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+          });
+        }, 1000);
+      });
+    </script>
+    <!-- #endregion -->
   </body>
 </html>
