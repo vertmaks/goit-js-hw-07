@@ -15,9 +15,7 @@ boxes.append(boxesList);
 
 function createEvent() {
   if (input.value >= 1 && input.value <= 100) {
-    if (boxesList.querySelector('.box')) {
-      boxesList.innerHTML = '';
-    }
+    destroyEvent();
 
     let width = 30;
     let height = 30;
