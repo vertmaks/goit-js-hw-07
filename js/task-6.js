@@ -14,11 +14,11 @@ const boxesList = document.createElement('ul');
 boxes.append(boxesList);
 
 function createEvent() {
-  if (boxesList.querySelector('.box')) {
-    boxesList.innerHTML = '';
-  }
   if (input.value >= 1 && input.value <= 100) {
-    boxes.style.display = 'block';
+    if (boxesList.querySelector('.box')) {
+      boxesList.innerHTML = '';
+    }
+
     let width = 30;
     let height = 30;
     for (let i = 0; i < input.value; i++) {
@@ -29,8 +29,11 @@ function createEvent() {
       boxItem.style.height = `${height}px`;
       boxItem.style.backgroundColor = getRandomHexColor();
       boxesList.append(boxItem);
+
       width += 10;
       height += 10;
+
+      boxes.style.display = 'block';
     }
   } else {
     alert('Minimal amout is 1, maximal — 100 boxes!');
