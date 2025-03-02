@@ -1,0 +1,87 @@
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#controls {
+  display: flex;
+  gap: 16px;
+}
+
+#controls input {
+  text-align: center;
+  outline: none;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 150px;
+  height: 40px;
+
+  font-family: inherit;
+  font-size: 16px;
+  color: #2e2f42;
+
+  transition: border-color 0.35s ease-out;
+}
+
+#controls input:focus {
+  border-color: #000;
+}
+
+#controls button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background-color: #4e75ff;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  transition: background-color 0.35s ease-out;
+}
+
+#controls button:last-child {
+  background-color: #ff4e4e;
+
+  transition: background-color 0.35s ease-out;
+}
+
+#controls button:hover,
+#controls button:focus {
+  background-color: #6c8cff;
+}
+
+#controls button:last-child:hover,
+#controls button:last-child:focus {
+  background-color: #ff7070;
+}
+
+#boxes {
+  position: relative;
+
+  max-width: 1096px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #f1f1f7;
+  border-radius: 25px;
+  padding: 35px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+#boxes ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 44px;
+  row-gap: 32px;
+}

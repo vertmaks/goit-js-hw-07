@@ -42,6 +42,6 @@ const mainWrapper = document.createElement('main');
 mainWrapper.classList.add('main');
 
 gallery.parentNode.insertBefore(mainWrapper, gallery);
-mainWrapper.appendChild(gallery);
+mainWrapper.append(gallery);
 
 //#endregion
