@@ -19,6 +19,8 @@ function createEvent() {
 
     let width = 30;
     let height = 30;
+    const boxesArr = [];
+
     for (let i = 0; i < input.value; i++) {
       const boxItem = document.createElement('li');
 
@@ -26,16 +28,20 @@ function createEvent() {
       boxItem.style.width = `${width}px`;
       boxItem.style.height = `${height}px`;
       boxItem.style.backgroundColor = getRandomHexColor();
-      boxesList.append(boxItem);
+      // boxesList.append(boxItem);
+      boxesArr.push(boxItem);
 
       width += 10;
       height += 10;
 
-      boxes.style.display = 'block';
+      // console.log(boxesArr);
     }
+    boxesList.append(...boxesArr);
+    boxes.style.display = 'block';
   } else {
     alert('Minimal amout is 1, maximal — 100 boxes!');
   }
+  input.value = '';
 }
 
 function destroyEvent() {
